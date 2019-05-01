@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:converters="clr-namespace:BlazorXamarin.UI.Common.Converters;assembly=BlazorXamarin.UI.Common"
+             x:Class="BlazorXamarin.UI.Common.Views.FetchData"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+        <converters:ShortDateStringConverter x:Key="ShortDateStringConverter" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="This component demonstrates fetching data from the server." />
+            <Label Text="Loading..." IsVisible="{Binding IsLoading}" />
+            <ListView ItemsSource="{Binding Forecasts}" IsVisible="{Binding IsLoading, Converter={StaticResource InverseBooleanConverter}}">
+                <ListView.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" Text="Date" FontAttributes="Bold" />
+                        <Label Grid.Column="1" Grid.Row="0" Text="Temp. (C)" FontAttributes="Bold" />
+                        <Label Grid.Column="2" Grid.Row="0" Text="Temp. (F)" FontAttributes="Bold" />
+                        <Label Grid.Column="3" Grid.Row="0" Text="Summary" FontAttributes="Bold" />
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" Text="{Binding Date, Converter={StaticResource ShortDateStringConverter}}" />
+                                <Label Grid.Column="1" Grid.Row="0" Text="{Binding TemperatureC}" />
+                                <Label Grid.Column="2" Grid.Row="0" Text="{Binding TemperatureF}" />
+                                <Label Grid.Column="3" Grid.Row="0" Text="{Binding Summary}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

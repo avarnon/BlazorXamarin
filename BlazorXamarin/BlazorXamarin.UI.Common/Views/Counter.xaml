@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="BlazorXamarin.UI.Common.Views.Counter"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Current count: " />
+                <Label Text="{Binding CurrentCount}" />
+            </StackLayout>
+            <Button Text="Click me">
+                <Button.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding IncrementCounterCommand}" />
+                </Button.GestureRecognizers>
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

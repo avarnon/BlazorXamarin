@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+            xmlns:local="clr-namespace:BlazorXamarin.UI.Common.Views;assembly=BlazorXamarin.UI.Common"
+            prism:ViewModelLocator.AutowireViewModel="True"
+            x:Class="BlazorXamarin.UI.Common.Views.NavMenu">
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="About" Command="{Binding AboutCommand}" />
+    </TabbedPage.ToolbarItems>
+    <NavigationPage Title="Home">
+        <x:Arguments>
+            <local:MainPage />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Counter">
+        <x:Arguments>
+            <local:Counter />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Fetch data">
+        <x:Arguments>
+            <local:FetchData />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>
