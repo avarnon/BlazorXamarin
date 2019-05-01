@@ -16,11 +16,13 @@ namespace BlazorXamarin.Blazor
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton(GetConfiguration());
-            services.AddTransient<IWeatherForecastService, WeatherForecastService>();
+            services.AddTransient<ITranslationService, TranslationService>();
+            services.AddSingleton<IWeatherForecastService, WeatherForecastService>();
         }
 
         public void Configure(IComponentsApplicationBuilder app)
         {
+            app.UseBrowserLocalization();
             app.AddComponent<App>("app");
         }
 

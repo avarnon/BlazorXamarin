@@ -1,7 +1,11 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+@using BlazorXamarin.Application.Contracts
 
-Welcome to your new app.
+@inject ITranslationService _translationService
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<h1>@_translationService["Home_Header"]</h1>
+
+@_translationService["Home_Welcome"]
+
+<SurveyPrompt Title="@_translationService["Home_SurveyTitle"]" />

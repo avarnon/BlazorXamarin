@@ -1,12 +1,16 @@
 ﻿@inherits LayoutComponentBase
 
+@using BlazorXamarin.Application.Contracts
+
+@inject ITranslationService _translationService
+
 <div class="sidebar">
     <NavMenu />
 </div>
 
 <div class="main">
     <div class="top-row px-4">
-        <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+        <a href="http://blazor.net" target="_blank" class="ml-md-auto">@_translationService["MainMenu_About"]</a>
     </div>
 
     <div class="content px-4">
