@@ -22,7 +22,7 @@ namespace BlazorXamarin.Application.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Strings {
+    public class Strings {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace BlazorXamarin.Application.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BlazorXamarin.Application.Resources.Strings", typeof(Strings).Assembly);
@@ -51,7 +51,7 @@ namespace BlazorXamarin.Application.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Current count:.
         /// </summary>
-        internal static string Counter_CurrentCount {
+        public static string Counter_CurrentCount {
             get {
                 return ResourceManager.GetString("Counter_CurrentCount", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Counter.
         /// </summary>
-        internal static string Counter_Header {
+        public static string Counter_Header {
             get {
                 return ResourceManager.GetString("Counter_Header", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Click me.
         /// </summary>
-        internal static string Counter_Increment {
+        public static string Counter_Increment {
             get {
                 return ResourceManager.GetString("Counter_Increment", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Balmy.
         /// </summary>
-        internal static string FetchData__Summary_Balmy {
+        public static string FetchData__Summary_Balmy {
             get {
                 return ResourceManager.GetString("FetchData__Summary_Balmy", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Bracing.
         /// </summary>
-        internal static string FetchData__Summary_Bracing {
+        public static string FetchData__Summary_Bracing {
             get {
                 return ResourceManager.GetString("FetchData__Summary_Bracing", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Chilly.
         /// </summary>
-        internal static string FetchData__Summary_Chilly {
+        public static string FetchData__Summary_Chilly {
             get {
                 return ResourceManager.GetString("FetchData__Summary_Chilly", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cool.
         /// </summary>
-        internal static string FetchData__Summary_Cool {
+        public static string FetchData__Summary_Cool {
             get {
                 return ResourceManager.GetString("FetchData__Summary_Cool", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Freezing.
         /// </summary>
-        internal static string FetchData__Summary_Freezing {
+        public static string FetchData__Summary_Freezing {
             get {
                 return ResourceManager.GetString("FetchData__Summary_Freezing", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Hot.
         /// </summary>
-        internal static string FetchData__Summary_Hot {
+        public static string FetchData__Summary_Hot {
             get {
                 return ResourceManager.GetString("FetchData__Summary_Hot", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Mild.
         /// </summary>
-        internal static string FetchData__Summary_Mild {
+        public static string FetchData__Summary_Mild {
             get {
                 return ResourceManager.GetString("FetchData__Summary_Mild", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Scorching.
         /// </summary>
-        internal static string FetchData__Summary_Scorching {
+        public static string FetchData__Summary_Scorching {
             get {
                 return ResourceManager.GetString("FetchData__Summary_Scorching", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Sweltering.
         /// </summary>
-        internal static string FetchData__Summary_Sweltering {
+        public static string FetchData__Summary_Sweltering {
             get {
                 return ResourceManager.GetString("FetchData__Summary_Sweltering", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Warm.
         /// </summary>
-        internal static string FetchData__Summary_Warm {
+        public static string FetchData__Summary_Warm {
             get {
                 return ResourceManager.GetString("FetchData__Summary_Warm", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to This component demonstrates fetching data from the server..
         /// </summary>
-        internal static string FetchData_Description {
+        public static string FetchData_Description {
             get {
                 return ResourceManager.GetString("FetchData_Description", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Weather forecast.
         /// </summary>
-        internal static string FetchData_Header {
+        public static string FetchData_Header {
             get {
                 return ResourceManager.GetString("FetchData_Header", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Date.
         /// </summary>
-        internal static string FetchData_Header_Date {
+        public static string FetchData_Header_Date {
             get {
                 return ResourceManager.GetString("FetchData_Header_Date", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Summary.
         /// </summary>
-        internal static string FetchData_Header_Summary {
+        public static string FetchData_Header_Summary {
             get {
                 return ResourceManager.GetString("FetchData_Header_Summary", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Temp. (C).
         /// </summary>
-        internal static string FetchData_Header_TempC {
+        public static string FetchData_Header_TempC {
             get {
                 return ResourceManager.GetString("FetchData_Header_TempC", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Temp. (F).
         /// </summary>
-        internal static string FetchData_Header_TempF {
+        public static string FetchData_Header_TempF {
             get {
                 return ResourceManager.GetString("FetchData_Header_TempF", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Loading....
         /// </summary>
-        internal static string FetchData_Loading {
+        public static string FetchData_Loading {
             get {
                 return ResourceManager.GetString("FetchData_Loading", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Hello, world!.
         /// </summary>
-        internal static string Home_Header {
+        public static string Home_Header {
             get {
                 return ResourceManager.GetString("Home_Header", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to How is Blazor working for you?.
         /// </summary>
-        internal static string Home_SurveyTitle {
+        public static string Home_SurveyTitle {
             get {
                 return ResourceManager.GetString("Home_SurveyTitle", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Welcome to your new app..
         /// </summary>
-        internal static string Home_Welcome {
+        public static string Home_Welcome {
             get {
                 return ResourceManager.GetString("Home_Welcome", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to About.
         /// </summary>
-        internal static string MainMenu_About {
+        public static string MainMenu_About {
             get {
                 return ResourceManager.GetString("MainMenu_About", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to BlazorXamarin.Blazor.
         /// </summary>
-        internal static string NavMenu_AppName {
+        public static string NavMenu_AppName {
             get {
                 return ResourceManager.GetString("NavMenu_AppName", resourceCulture);
             }
@@ -288,7 +288,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Counter.
         /// </summary>
-        internal static string NavMenu_Counter {
+        public static string NavMenu_Counter {
             get {
                 return ResourceManager.GetString("NavMenu_Counter", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Fetch data.
         /// </summary>
-        internal static string NavMenu_FetchData {
+        public static string NavMenu_FetchData {
             get {
                 return ResourceManager.GetString("NavMenu_FetchData", resourceCulture);
             }
@@ -306,7 +306,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
-        internal static string NavMenu_Home {
+        public static string NavMenu_Home {
             get {
                 return ResourceManager.GetString("NavMenu_Home", resourceCulture);
             }
@@ -315,7 +315,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to brief survey.
         /// </summary>
-        internal static string Survey_Anchor {
+        public static string Survey_Anchor {
             get {
                 return ResourceManager.GetString("Survey_Anchor", resourceCulture);
             }
@@ -324,7 +324,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to and tell us what you think..
         /// </summary>
-        internal static string Survey_End {
+        public static string Survey_End {
             get {
                 return ResourceManager.GetString("Survey_End", resourceCulture);
             }
@@ -333,7 +333,7 @@ namespace BlazorXamarin.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Please take our.
         /// </summary>
-        internal static string Survey_Start {
+        public static string Survey_Start {
             get {
                 return ResourceManager.GetString("Survey_Start", resourceCulture);
             }

@@ -1,17 +1,19 @@
-﻿using Android.App;
-using Android.Content.PM;
-using Android.OS;
-using BlazorXamarin.Application.Models;
-using Java.Lang;
-using Newtonsoft.Json;
-using Prism;
-using Prism.Ioc;
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Reflection;
+using Android.App;
+using Android.Content.PM;
+using Android.OS;
+using BlazorXamarin.Application.Models;
+using BlazorXamarin.Droid.Services;
+using BlazorXamarin.UI.Common.Contracts;
+using Java.Lang;
+using Newtonsoft.Json;
+using Prism;
+using Prism.Ioc;
 
 namespace BlazorXamarin.Droid
 {
@@ -35,6 +37,7 @@ namespace BlazorXamarin.Droid
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterInstance(GetConfiguration());
+            containerRegistry.Register<ILocalize, Localize>();
 
             HttpClient httpClient = new HttpClient();
             string proxyHost = JavaSystem.GetProperty("http.proxyHost");

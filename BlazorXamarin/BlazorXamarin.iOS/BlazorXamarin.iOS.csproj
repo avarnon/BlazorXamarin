@@ -90,6 +90,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Services\Localize.cs" />
     <EmbeddedResource Include="appsettings.json" />
     <EmbeddedResource Include="appsettings.debug.json">
       <DependentUpon>appsettings.json</DependentUpon>

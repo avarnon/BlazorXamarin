@@ -1,17 +1,18 @@
-﻿using BlazorXamarin.Application.Models;
-using CoreFoundation;
-using Foundation;
-using Newtonsoft.Json;
-using Prism;
-using Prism.Ioc;
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Reflection;
+using BlazorXamarin.Application.Models;
+using BlazorXamarin.iOS.Services;
+using BlazorXamarin.UI.Common.Contracts;
+using CoreFoundation;
+using Foundation;
+using Newtonsoft.Json;
+using Prism;
+using Prism.Ioc;
 using UIKit;
-
 
 namespace BlazorXamarin.iOS
 {
@@ -42,6 +43,7 @@ namespace BlazorXamarin.iOS
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterInstance(GetConfiguration());
+            containerRegistry.Register<ILocalize, Localize>();
 
             HttpClient httpClient = new HttpClient();
             CFProxySettings systemProxySettings = CFNetwork.GetSystemProxySettings();

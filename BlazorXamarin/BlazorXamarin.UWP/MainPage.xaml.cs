@@ -1,15 +1,15 @@
-﻿using BlazorXamarin.Application.Contracts;
-using BlazorXamarin.Application.Models;
-using BlazorXamarin.Application.Services;
-using Newtonsoft.Json;
-using Prism;
-using Prism.Ioc;
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Reflection;
+using BlazorXamarin.Application.Models;
+using BlazorXamarin.UI.Common.Contracts;
+using BlazorXamarin.UWP.Services;
+using Newtonsoft.Json;
+using Prism;
+using Prism.Ioc;
 using Windows.Networking.Connectivity;
 
 namespace BlazorXamarin.UWP
@@ -30,6 +30,7 @@ namespace BlazorXamarin.UWP
         {
             Configuration configuration = GetConfiguration();
             containerRegistry.RegisterInstance(configuration);
+            containerRegistry.Register<ILocalize, Localize>();
 
             HttpClient httpClient = new HttpClient();
 

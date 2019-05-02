@@ -2,6 +2,7 @@
 using Prism.Commands;
 using Prism.Navigation;
 using System;
+using Xamarin.Forms;
 
 namespace BlazorXamarin.UI.Common.ViewModels
 {
@@ -15,7 +16,7 @@ namespace BlazorXamarin.UI.Common.ViewModels
         public CounterViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            Title = "Counter";
+            this.Title = "Counter";
             this.IncrementCounterCommand = new DelegateCommand(() => this.IncrementCounter());
         }
 
@@ -40,7 +41,11 @@ namespace BlazorXamarin.UI.Common.ViewModels
 
         private void IncrementCounter()
         {
-            this.CurrentCount = this.CurrentCount + 1;
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                int currentCount = this.CurrentCount + 1;
+                this.CurrentCount = currentCount;
+            });
         }
     }
 }

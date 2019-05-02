@@ -2,20 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:i18n="clr-namespace:BlazorXamarin.UI.Common;assembly=BlazorXamarin.UI.Common"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BlazorXamarin.UI.Common.Views.Counter"
-             Title="{Binding Title}">
+             Title="{i18n:Translate Text=Counter_Header}">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Current count: " />
+                <Label Text="{i18n:Translate Text=Counter_CurrentCount}" />
+                <Label Text=" " />
                 <Label Text="{Binding CurrentCount}" />
             </StackLayout>
-            <Button Text="Click me">
-                <Button.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding IncrementCounterCommand}" />
-                </Button.GestureRecognizers>
-            </Button>
+            <Button Text="{i18n:Translate Text=Counter_Increment}" Command="{Binding IncrementCounterCommand}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

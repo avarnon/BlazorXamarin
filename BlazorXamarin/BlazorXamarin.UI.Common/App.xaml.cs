@@ -1,5 +1,7 @@
-﻿using BlazorXamarin.Application.Contracts;
+﻿using System.Globalization;
+using BlazorXamarin.Application.Contracts;
 using BlazorXamarin.Application.Services;
+using BlazorXamarin.UI.Common.Contracts;
 using BlazorXamarin.UI.Common.ViewModels;
 using BlazorXamarin.UI.Common.Views;
 using Prism;
@@ -17,13 +19,23 @@ namespace BlazorXamarin.UI.Common
          * This imposes a limitation in which the App class must have a default constructor. 
          * App(IPlatformInitializer initializer = null) cannot be handled by the Activator.
          */
-        public App() : this(null) { }
+        public App()
+            : this(null)
+        {
+        }
 
-        public App(IPlatformInitializer initializer) : base(initializer) { }
+        public App(IPlatformInitializer initializer)
+            : base(initializer)
+        {
+        }
 
         protected override async void OnInitialized()
         {
             InitializeComponent();
+
+            ILocalize localize = this.Container.Resolve<ILocalize>();
+            CultureInfo cultureInfo = localize.CultureInfo;
+            localize.CultureInfo = cultureInfo;
 
             await NavigationService.NavigateAsync("NavigationPage/NavMenu");
         }
@@ -36,6 +48,7 @@ namespace BlazorXamarin.UI.Common
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<Counter, CounterViewModel>();
 
+            containerRegistry.Register<ITranslationService, TranslationService>();
             containerRegistry.Register<IWeatherForecastService, WeatherForecastService>();
         }
     }
