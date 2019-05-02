@@ -90,11 +90,14 @@ if (!!appLoading) {
         locale = locale.split("-")[0];
     }
     switch (locale.toLowerCase()) {
-        case "fr":
-            appLoading.innerText = "Chargement...";
+        case "de":
+            appLoading.innerText = "Wird geladen...";
             break;
         case "es":
             appLoading.innerText = "Cargando...";
+            break;
+        case "fr":
+            appLoading.innerText = "Chargement...";
             break;
         case "en":
         default:

@@ -1,0 +1,13 @@
+{
+    "Home_Header": "Hallo Welt!",
+    "Home_SurveyTitle": "Wie arbeitet Blazor für Sie?",
+    "Home_Welcome": "Willkommen in Ihrer neuen App.",
+    "MainMenu_About": "Über",
+    "NavMenu_AppName": "BlazorXamarin.Blazor",
+    "NavMenu_Counter": "Zähler",
+    "NavMenu_FetchData": "Daten abrufen",
+    "NavMenu_Home": "Startseite",
+    "Survey_Anchor": "kurzen Umfrage teil",
+    "Survey_End": "und teilen Sie uns mit, was Sie denken.",
+    "Survey_Start": "Nehmen Sie an unserer"
+}
