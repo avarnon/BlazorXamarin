@@ -1,10 +1,14 @@
 ﻿@page "/counter"
 
-<h1>Counter</h1>
+@using BlazorXamarin.Application.Contracts
 
-<p>Current count: @currentCount</p>
+@inject ITranslationService _translationService
 
-<button class="btn btn-primary" onclick="@IncrementCount">Click me</button>
+<h1>@_translationService["Counter_Header"]</h1>
+
+<p>@_translationService["Counter_CurrentCount"] @currentCount.ToString("#,##0")</p>
+
+<button class="btn btn-primary" onclick="@IncrementCount">@_translationService["Counter_Increment"]</button>
 
 @functions {
     int currentCount = 0;

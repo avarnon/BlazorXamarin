@@ -117,6 +117,66 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Counter_CurrentCount" xml:space="preserve">
+    <value>Cuenta actual:</value>
+  </data>
+  <data name="Counter_Header" xml:space="preserve">
+    <value>Contador</value>
+  </data>
+  <data name="Counter_Increment" xml:space="preserve">
+    <value>Haz click en mi</value>
+  </data>
+  <data name="FetchData_Description" xml:space="preserve">
+    <value>Este componente demuestra la obtención de datos desde el servidor.</value>
+  </data>
+  <data name="FetchData_Header" xml:space="preserve">
+    <value>Pronóstico del tiempo</value>
+  </data>
+  <data name="FetchData_Header_Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="FetchData_Header_Summary" xml:space="preserve">
+    <value>Resumen</value>
+  </data>
+  <data name="FetchData_Header_TempC" xml:space="preserve">
+    <value>Temperatura. (DO)</value>
+  </data>
+  <data name="FetchData_Header_TempF" xml:space="preserve">
+    <value>Temperatura. (F)</value>
+  </data>
+  <data name="FetchData_Loading" xml:space="preserve">
+    <value>Cargando...</value>
+  </data>
+  <data name="FetchData__Summary_Balmy" xml:space="preserve">
+    <value>Balmy</value>
+  </data>
+  <data name="FetchData__Summary_Bracing" xml:space="preserve">
+    <value>Vigorizante</value>
+  </data>
+  <data name="FetchData__Summary_Chilly" xml:space="preserve">
+    <value>Frío</value>
+  </data>
+  <data name="FetchData__Summary_Cool" xml:space="preserve">
+    <value>Guay</value>
+  </data>
+  <data name="FetchData__Summary_Freezing" xml:space="preserve">
+    <value>Helado</value>
+  </data>
+  <data name="FetchData__Summary_Hot" xml:space="preserve">
+    <value>Caliente</value>
+  </data>
+  <data name="FetchData__Summary_Mild" xml:space="preserve">
+    <value>Templado</value>
+  </data>
+  <data name="FetchData__Summary_Scorching" xml:space="preserve">
+    <value>Abrasador</value>
+  </data>
+  <data name="FetchData__Summary_Sweltering" xml:space="preserve">
+    <value>Sofocante</value>
+  </data>
+  <data name="FetchData__Summary_Warm" xml:space="preserve">
+    <value>Calentar</value>
+  </data>
   <data name="Home_Header" xml:space="preserve">
     <value>¡Hola Mundo!</value>
   </data>

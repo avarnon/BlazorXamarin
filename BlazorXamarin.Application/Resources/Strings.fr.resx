@@ -117,6 +117,66 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Counter_CurrentCount" xml:space="preserve">
+    <value>Nombre actuel:</value>
+  </data>
+  <data name="Counter_Header" xml:space="preserve">
+    <value>Compteur</value>
+  </data>
+  <data name="Counter_Increment" xml:space="preserve">
+    <value>Cliquez moi</value>
+  </data>
+  <data name="FetchData_Description" xml:space="preserve">
+    <value>Ce composant montre comment extraire des données du serveur.</value>
+  </data>
+  <data name="FetchData_Header" xml:space="preserve">
+    <value>Prévisions météorologiques</value>
+  </data>
+  <data name="FetchData_Header_Date" xml:space="preserve">
+    <value>L'date</value>
+  </data>
+  <data name="FetchData_Header_Summary" xml:space="preserve">
+    <value>Résumé</value>
+  </data>
+  <data name="FetchData_Header_TempC" xml:space="preserve">
+    <value>Temp. (C)</value>
+  </data>
+  <data name="FetchData_Header_TempF" xml:space="preserve">
+    <value>Temp. (F)</value>
+  </data>
+  <data name="FetchData_Loading" xml:space="preserve">
+    <value>Chargement...</value>
+  </data>
+  <data name="FetchData__Summary_Balmy" xml:space="preserve">
+    <value>Embaumé</value>
+  </data>
+  <data name="FetchData__Summary_Bracing" xml:space="preserve">
+    <value>Entretoisement</value>
+  </data>
+  <data name="FetchData__Summary_Chilly" xml:space="preserve">
+    <value>Froid</value>
+  </data>
+  <data name="FetchData__Summary_Cool" xml:space="preserve">
+    <value>Cool</value>
+  </data>
+  <data name="FetchData__Summary_Freezing" xml:space="preserve">
+    <value>Glacial</value>
+  </data>
+  <data name="FetchData__Summary_Hot" xml:space="preserve">
+    <value>Chaud</value>
+  </data>
+  <data name="FetchData__Summary_Mild" xml:space="preserve">
+    <value>Doux</value>
+  </data>
+  <data name="FetchData__Summary_Scorching" xml:space="preserve">
+    <value>Brûlant</value>
+  </data>
+  <data name="FetchData__Summary_Sweltering" xml:space="preserve">
+    <value>Étouffant</value>
+  </data>
+  <data name="FetchData__Summary_Warm" xml:space="preserve">
+    <value>Chaud</value>
+  </data>
   <data name="Home_Header" xml:space="preserve">
     <value>Bonjour le monde!</value>
   </data>

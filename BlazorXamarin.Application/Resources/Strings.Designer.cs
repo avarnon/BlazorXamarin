@@ -61,6 +61,186 @@ namespace BlazorXamarin.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Current count:.
+        /// </summary>
+        internal static string Counter_CurrentCount {
+            get {
+                return ResourceManager.GetString("Counter_CurrentCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Counter.
+        /// </summary>
+        internal static string Counter_Header {
+            get {
+                return ResourceManager.GetString("Counter_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click me.
+        /// </summary>
+        internal static string Counter_Increment {
+            get {
+                return ResourceManager.GetString("Counter_Increment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Balmy.
+        /// </summary>
+        internal static string FetchData__Summary_Balmy {
+            get {
+                return ResourceManager.GetString("FetchData__Summary_Balmy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bracing.
+        /// </summary>
+        internal static string FetchData__Summary_Bracing {
+            get {
+                return ResourceManager.GetString("FetchData__Summary_Bracing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chilly.
+        /// </summary>
+        internal static string FetchData__Summary_Chilly {
+            get {
+                return ResourceManager.GetString("FetchData__Summary_Chilly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cool.
+        /// </summary>
+        internal static string FetchData__Summary_Cool {
+            get {
+                return ResourceManager.GetString("FetchData__Summary_Cool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Freezing.
+        /// </summary>
+        internal static string FetchData__Summary_Freezing {
+            get {
+                return ResourceManager.GetString("FetchData__Summary_Freezing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hot.
+        /// </summary>
+        internal static string FetchData__Summary_Hot {
+            get {
+                return ResourceManager.GetString("FetchData__Summary_Hot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mild.
+        /// </summary>
+        internal static string FetchData__Summary_Mild {
+            get {
+                return ResourceManager.GetString("FetchData__Summary_Mild", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scorching.
+        /// </summary>
+        internal static string FetchData__Summary_Scorching {
+            get {
+                return ResourceManager.GetString("FetchData__Summary_Scorching", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sweltering.
+        /// </summary>
+        internal static string FetchData__Summary_Sweltering {
+            get {
+                return ResourceManager.GetString("FetchData__Summary_Sweltering", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warm.
+        /// </summary>
+        internal static string FetchData__Summary_Warm {
+            get {
+                return ResourceManager.GetString("FetchData__Summary_Warm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This component demonstrates fetching data from the server..
+        /// </summary>
+        internal static string FetchData_Description {
+            get {
+                return ResourceManager.GetString("FetchData_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weather forecast.
+        /// </summary>
+        internal static string FetchData_Header {
+            get {
+                return ResourceManager.GetString("FetchData_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        internal static string FetchData_Header_Date {
+            get {
+                return ResourceManager.GetString("FetchData_Header_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summary.
+        /// </summary>
+        internal static string FetchData_Header_Summary {
+            get {
+                return ResourceManager.GetString("FetchData_Header_Summary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temp. (C).
+        /// </summary>
+        internal static string FetchData_Header_TempC {
+            get {
+                return ResourceManager.GetString("FetchData_Header_TempC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temp. (F).
+        /// </summary>
+        internal static string FetchData_Header_TempF {
+            get {
+                return ResourceManager.GetString("FetchData_Header_TempF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading....
+        /// </summary>
+        internal static string FetchData_Loading {
+            get {
+                return ResourceManager.GetString("FetchData_Loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hello, world!.
         /// </summary>
         internal static string Home_Header {

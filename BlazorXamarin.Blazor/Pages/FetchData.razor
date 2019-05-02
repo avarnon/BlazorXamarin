@@ -3,25 +3,26 @@
 @using BlazorXamarin.Application.Models
 @using BlazorXamarin.Application.Contracts
 
+@inject ITranslationService _translationService
 @inject IWeatherForecastService _weatherForcastService
 
-<h1>Weather forecast</h1>
+<h1>@_translationService["FetchData_Header"]</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p>@_translationService["FetchData_Description"]</p>
 
 @if (forecasts == null)
 {
-    <p><em>Loading...</em></p>
+    <p><em>@_translationService["FetchData_Loading"]</em></p>
 }
 else
 {
     <table class="table">
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
+                <th>@_translationService["FetchData_Header_Date"]</th>
+                <th>@_translationService["FetchData_Header_TempC"]</th>
+                <th>@_translationService["FetchData_Header_TempF"]</th>
+                <th>@_translationService["FetchData_Header_Summary"]</th>
             </tr>
         </thead>
         <tbody>
@@ -31,7 +32,7 @@ else
                     <td>@forecast.Date.ToShortDateString()</td>
                     <td>@forecast.TemperatureC</td>
                     <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
+                    <td>@_translationService[$"FetchData__Summary_{forecast.Summary}"]</td>
                 </tr>
             }
         </tbody>
