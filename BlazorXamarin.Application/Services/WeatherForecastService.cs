@@ -1,8 +1,8 @@
-﻿using BlazorXamarin.Application.Contracts;
-using BlazorXamarin.Application.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using BlazorXamarin.Application.Contracts;
+using BlazorXamarin.Application.Models;
 
 namespace BlazorXamarin.Application.Services
 {

@@ -7,7 +7,9 @@ using System.Reflection;
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using BlazorXamarin.Application.Contracts;
 using BlazorXamarin.Application.Models;
+using BlazorXamarin.Application.Services;
 using BlazorXamarin.Droid.Services;
 using BlazorXamarin.UI.Common.Contracts;
 using Java.Lang;
@@ -38,26 +40,7 @@ namespace BlazorXamarin.Droid
         {
             containerRegistry.RegisterInstance(GetConfiguration());
             containerRegistry.Register<ILocalize, Localize>();
-
-            HttpClient httpClient = new HttpClient();
-            string proxyHost = JavaSystem.GetProperty("http.proxyHost");
-            string proxyPortString = JavaSystem.GetProperty("http.proxyPort");
-
-            if (!string.IsNullOrWhiteSpace(proxyHost) &&
-                !string.IsNullOrWhiteSpace(proxyPortString) &&
-                int.TryParse(proxyPortString, out int proxyPort) &&
-                proxyPort != 0)
-            {
-                WebProxy webProxy = new WebProxy(proxyHost, proxyPort);
-                HttpClientHandler httpClientHandler = new HttpClientHandler
-                {
-                    Proxy = webProxy,
-                };
-
-                httpClient = new HttpClient(httpClientHandler);
-            }
-
-            containerRegistry.RegisterInstance(httpClient);
+            containerRegistry.RegisterSingleton<IWebProxyFactory, WebProxyFactory>();
         }
 
         private Configuration GetConfiguration()

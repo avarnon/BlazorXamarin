@@ -1,7 +1,7 @@
-﻿using Prism;
+﻿using System;
+using Prism;
 using Prism.Commands;
 using Prism.Navigation;
-using System;
 using Xamarin.Forms;
 
 namespace BlazorXamarin.UI.Common.ViewModels

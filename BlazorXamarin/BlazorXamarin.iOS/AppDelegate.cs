@@ -4,7 +4,9 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Reflection;
+using BlazorXamarin.Application.Contracts;
 using BlazorXamarin.Application.Models;
+using BlazorXamarin.Application.Services;
 using BlazorXamarin.iOS.Services;
 using BlazorXamarin.UI.Common.Contracts;
 using CoreFoundation;
@@ -44,26 +46,7 @@ namespace BlazorXamarin.iOS
         {
             containerRegistry.RegisterInstance(GetConfiguration());
             containerRegistry.Register<ILocalize, Localize>();
-
-            HttpClient httpClient = new HttpClient();
-            CFProxySettings systemProxySettings = CFNetwork.GetSystemProxySettings();
-            string proxyHost = systemProxySettings.HTTPProxy;
-            int proxyPort = systemProxySettings.HTTPPort;
-
-            if (!string.IsNullOrWhiteSpace(proxyHost) &&
-                proxyPort != 0)
-            {
-                WebProxy webProxy = new WebProxy(proxyHost, proxyPort);
-                HttpClientHandler httpClientHandler = new HttpClientHandler
-                {
-                    Proxy = webProxy,
-                };
-
-                httpClient = new HttpClient(httpClientHandler);
-                containerRegistry.RegisterInstance(httpClient);
-            }
-
-            containerRegistry.RegisterInstance(httpClient);
+            containerRegistry.RegisterSingleton<IWebProxyFactory, WebProxyFactory>();
         }
 
         private Configuration GetConfiguration()

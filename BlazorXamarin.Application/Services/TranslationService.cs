@@ -1,11 +1,11 @@
-﻿using BlazorXamarin.Application.Contracts;
-using Newtonsoft.Json;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using BlazorXamarin.Application.Contracts;
+using Newtonsoft.Json;
 
 namespace BlazorXamarin.Application.Services
 {

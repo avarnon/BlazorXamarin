@@ -1,9 +1,9 @@
-﻿using BlazorXamarin.Blazor.Contracts;
-using BlazorXamarin.Blazor.Extensions;
-using Microsoft.JSInterop;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
+using BlazorXamarin.Blazor.Contracts;
+using BlazorXamarin.Blazor.Extensions;
+using Microsoft.JSInterop;
 
 namespace BlazorXamarin.Blazor
 {

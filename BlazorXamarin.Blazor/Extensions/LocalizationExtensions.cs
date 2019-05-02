@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Components.Builder;
+﻿using System.Globalization;
+using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.JSInterop;
-using System.Globalization;
 
 namespace BlazorXamarin.Blazor
 {

@@ -4,7 +4,10 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Reflection;
+using System.Threading.Tasks;
+using BlazorXamarin.Application.Contracts;
 using BlazorXamarin.Application.Models;
+using BlazorXamarin.Application.Services;
 using BlazorXamarin.UI.Common.Contracts;
 using BlazorXamarin.UWP.Services;
 using Newtonsoft.Json;
@@ -28,37 +31,9 @@ namespace BlazorXamarin.UWP
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            Configuration configuration = GetConfiguration();
-            containerRegistry.RegisterInstance(configuration);
+            containerRegistry.RegisterInstance(GetConfiguration());
             containerRegistry.Register<ILocalize, Localize>();
-
-            HttpClient httpClient = new HttpClient();
-
-            if (!string.IsNullOrWhiteSpace(configuration?.ApiServerUrl) &&
-                Uri.TryCreate(configuration.ApiServerUrl, UriKind.Absolute, out Uri apiServerUri))
-            {
-                ProxyConfiguration proxyConfiguration = NetworkInformation.GetProxyConfigurationAsync(apiServerUri).GetResults();
-                if (proxyConfiguration.ProxyUris.Count > 0)
-                {
-                    Uri proxyUri = proxyConfiguration.ProxyUris[0];
-                    string proxyHost = proxyUri.Host;
-                    int proxyPort = proxyUri.Port;
-
-                    if (!string.IsNullOrWhiteSpace(proxyHost) &&
-                        proxyPort != 0)
-                    {
-                        WebProxy webProxy = new WebProxy(proxyHost, proxyPort);
-                        HttpClientHandler httpClientHandler = new HttpClientHandler
-                        {
-                            Proxy = webProxy,
-                        };
-
-                        httpClient = new HttpClient(httpClientHandler);
-                    }
-                }
-            }
-
-            containerRegistry.RegisterInstance(httpClient);
+            containerRegistry.RegisterSingleton<IWebProxyFactory, WebProxyFactory>();
         }
 
         private Configuration GetConfiguration()

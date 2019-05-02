@@ -1,6 +1,4 @@
-﻿using Prism.Commands;
-using Prism.Navigation;
-using System;
+﻿using Prism.Navigation;
 
 namespace BlazorXamarin.UI.Common.ViewModels
 {

@@ -1,13 +1,15 @@
-using BlazorXamarin.Application.Contracts;
-using BlazorXamarin.Application.Models;
-using BlazorXamarin.Application.Services;
-using Microsoft.AspNetCore.Components.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.JSInterop;
 using System;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Reflection;
+using BlazorXamarin.Application.Contracts;
+using BlazorXamarin.Application.Models;
+using BlazorXamarin.Application.Services;
+using BlazorXamarin.Blazor.Services;
+using Microsoft.AspNetCore.Components.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.JSInterop;
 
 namespace BlazorXamarin.Blazor
 {
@@ -18,6 +20,13 @@ namespace BlazorXamarin.Blazor
             services.AddSingleton(GetConfiguration());
             services.AddTransient<ITranslationService, TranslationService>();
             services.AddSingleton<IWeatherForecastService, WeatherForecastService>();
+            services.AddSingleton<HttpMessageHandler, BlazorHttpClientHandler>();
+            services.AddSingleton<HttpClient>((IServiceProvider serviceProvider) =>
+            {
+                HttpMessageHandler httpClientHandler = serviceProvider.GetRequiredService<HttpMessageHandler>();
+
+                return new HttpClient(httpClientHandler);
+            });
         }
 
         public void Configure(IComponentsApplicationBuilder app)

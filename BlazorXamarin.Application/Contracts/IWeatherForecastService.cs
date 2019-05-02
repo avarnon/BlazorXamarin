@@ -1,8 +1,6 @@
-﻿using BlazorXamarin.Application.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using BlazorXamarin.Application.Models;
 
 namespace BlazorXamarin.Application.Contracts
 {

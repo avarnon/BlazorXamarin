@@ -1,11 +1,10 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Threading;
-using BlazorXamarin.UI.Common.Services;
 using BlazorXamarin.UI.Common.Contracts;
+using BlazorXamarin.UI.Common.Models;
+using BlazorXamarin.UI.Common.Services;
 using Java.Util;
 using Xamarin.Forms;
-using BlazorXamarin.UI.Common.Models;
 
 namespace BlazorXamarin.Droid.Services
 {

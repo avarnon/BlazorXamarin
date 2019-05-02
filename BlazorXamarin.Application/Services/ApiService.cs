@@ -1,8 +1,8 @@
-﻿using BlazorXamarin.Application.Models;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using BlazorXamarin.Application.Models;
+using Newtonsoft.Json;
 
 namespace BlazorXamarin.Application.Services
 {

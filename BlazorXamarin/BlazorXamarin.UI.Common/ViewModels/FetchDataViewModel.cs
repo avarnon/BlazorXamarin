@@ -1,11 +1,11 @@
-﻿using BlazorXamarin.Application.Contracts;
-using BlazorXamarin.Application.Models;
-using Prism;
-using Prism.Navigation;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using BlazorXamarin.Application.Contracts;
+using BlazorXamarin.Application.Models;
+using Prism;
+using Prism.Navigation;
 
 namespace BlazorXamarin.UI.Common.ViewModels
 {

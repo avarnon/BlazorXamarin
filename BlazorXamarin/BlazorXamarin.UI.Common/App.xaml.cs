@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Net.Http;
 using BlazorXamarin.Application.Contracts;
 using BlazorXamarin.Application.Services;
 using BlazorXamarin.UI.Common.Contracts;
@@ -6,8 +7,13 @@ using BlazorXamarin.UI.Common.ViewModels;
 using BlazorXamarin.UI.Common.Views;
 using Prism;
 using Prism.Ioc;
-using Xamarin.Forms;
+using Prism.Unity;
 using Xamarin.Forms.Xaml;
+using Unity;
+using Unity.Extension;
+using Unity.Injection;
+using System.Threading;
+using System.Threading.Tasks;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace BlazorXamarin.UI.Common
@@ -50,6 +56,9 @@ namespace BlazorXamarin.UI.Common
 
             containerRegistry.Register<ITranslationService, TranslationService>();
             containerRegistry.Register<IWeatherForecastService, WeatherForecastService>();
+
+            containerRegistry.RegisterSingleton<HttpMessageHandler, BXHttpClientHandler>();
+            containerRegistry.GetContainer().RegisterSingleton<HttpClient>(new InjectionConstructor(typeof(HttpMessageHandler)));
         }
     }
 }

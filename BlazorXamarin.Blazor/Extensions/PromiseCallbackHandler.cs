@@ -1,7 +1,7 @@
-﻿using BlazorXamarin.Blazor.Contracts;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using BlazorXamarin.Blazor.Contracts;
+using Newtonsoft.Json;
 
 namespace BlazorXamarin.Blazor.Extensions
 {
