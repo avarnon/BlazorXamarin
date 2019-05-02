@@ -10,14 +10,6 @@ namespace BlazorXamarin.UI.Common.ViewModels
             : base(navigationService)
         {
             this.Title = "BlazorXamarin";
-            this.AboutCommand = new DelegateCommand(() => this.AboutClick());
-        }
-
-        public DelegateCommand AboutCommand { get; }
-
-        private void AboutClick()
-        {
-            Xamarin.Forms.Device.OpenUri(new Uri("http://blazor.net"));
         }
     }
 }

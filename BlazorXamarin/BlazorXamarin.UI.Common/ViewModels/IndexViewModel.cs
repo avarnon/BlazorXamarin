@@ -8,9 +8,9 @@ using System.Text;
 
 namespace BlazorXamarin.UI.Common.ViewModels
 {
-    public class MainPageViewModel : ViewModelBase
+    public class IndexViewModel : ViewModelBase
     {
-        public MainPageViewModel(INavigationService navigationService)
+        public IndexViewModel(INavigationService navigationService)
             : base(navigationService)
         {
             Title = "Hello, world!";

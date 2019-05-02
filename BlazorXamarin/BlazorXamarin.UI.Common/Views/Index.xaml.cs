@@ -7,9 +7,9 @@ using Xamarin.Forms;
 
 namespace BlazorXamarin.UI.Common.Views
 {
-    public partial class MainPage : ContentPage
+    public partial class Index : ContentPage
     {
-        public MainPage()
+        public Index()
         {
             InitializeComponent();
         }

@@ -37,16 +37,16 @@ namespace BlazorXamarin.UI.Common
             CultureInfo cultureInfo = localize.CultureInfo;
             localize.CultureInfo = cultureInfo;
 
-            await NavigationService.NavigateAsync("NavigationPage/NavMenu");
+            await NavigationService.NavigateAsync("MainLayout/NavMenu");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<FetchData, FetchDataViewModel>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
-            containerRegistry.RegisterForNavigation<NavMenu, NavMenuViewModel>();
-            containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<Counter, CounterViewModel>();
+            containerRegistry.RegisterForNavigation<FetchData, FetchDataViewModel>();
+            containerRegistry.RegisterForNavigation<Index, IndexViewModel>();
+            containerRegistry.RegisterForNavigation<MainLayout, MainLayoutViewModel>();
+            containerRegistry.RegisterForNavigation<NavMenu, NavMenuViewModel>();
 
             containerRegistry.Register<ITranslationService, TranslationService>();
             containerRegistry.Register<IWeatherForecastService, WeatherForecastService>();

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NavigationPage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                xmlns:i18n="clr-namespace:BlazorXamarin.UI.Common;assembly=BlazorXamarin.UI.Common"
+                prism:ViewModelLocator.AutowireViewModel="True"
+                x:Class="BlazorXamarin.UI.Common.Views.MainLayout">
+    <NavigationPage.ToolbarItems>
+        <ToolbarItem Text="{i18n:Translate Text=MainMenu_About}" Command="{Binding AboutCommand}" />
+    </NavigationPage.ToolbarItems>
+</NavigationPage>
