@@ -1,7 +1,6 @@
 using BlazorXamarin.Application.Contracts;
 using BlazorXamarin.Application.Models;
 using BlazorXamarin.Application.Services;
-using BlazorXamarin.Blazor.Services;
 using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.JSInterop;
@@ -9,7 +8,6 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using TranslationService = BlazorXamarin.Blazor.Services.TranslationService;
 
 namespace BlazorXamarin.Blazor
 {

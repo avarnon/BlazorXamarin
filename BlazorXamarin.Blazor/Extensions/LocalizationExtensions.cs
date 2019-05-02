@@ -23,8 +23,8 @@ namespace BlazorXamarin.Blazor
 
             CultureInfo culture = new CultureInfo(locale);
 
-            CultureInfo.DefaultThreadCurrentCulture = culture;
-            CultureInfo.DefaultThreadCurrentUICulture = culture;
+            CultureInfo.CurrentCulture = culture;
+            CultureInfo.CurrentUICulture = culture;
         }
     }
 }

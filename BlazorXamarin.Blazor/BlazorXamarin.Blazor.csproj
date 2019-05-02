@@ -16,10 +16,6 @@
     <Content Remove="appsettings.debug.json" />
     <Content Remove="appsettings.json" />
     <Content Remove="appsettings.release.json" />
-    <Content Remove="Resources\Strings.json" />
-    <Content Remove="Resources\Strings_de.json" />
-    <Content Remove="Resources\Strings_es.json" />
-    <Content Remove="Resources\Strings_fr.json" />
     <Content Remove="wwwroot\scripts\site.ts" />
   </ItemGroup>
 
@@ -27,10 +23,6 @@
     <EmbeddedResource Include="appsettings.debug.json" />
     <EmbeddedResource Include="appsettings.json" />
     <EmbeddedResource Include="appsettings.release.json" />
-    <EmbeddedResource Include="Resources\Strings_es.json" />
-    <EmbeddedResource Include="Resources\Strings_de.json" />
-    <EmbeddedResource Include="Resources\Strings_fr.json" />
-    <EmbeddedResource Include="Resources\Strings.json" />
   </ItemGroup>
 
   <ItemGroup>

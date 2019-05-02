@@ -1,5 +1,4 @@
 ﻿using System.Globalization;
-using BlazorXamarin.Application.Resources;
 using BlazorXamarin.UI.Common.Contracts;
 using Xamarin.Forms;
 
@@ -25,7 +24,6 @@ namespace BlazorXamarin.UI.Common.Services
             }
             set
             {
-                Strings.Culture = value;
                 this._currentCultureInfo = value;
 
                 if (this._languageChanged == false)
