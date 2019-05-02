@@ -5,6 +5,6 @@ namespace BlazorXamarin.Application.Services
 {
     public class TranslationService : ITranslationService
     {
-        public string this[string index] => Resources.Resources.ResourceManager.GetString(index, CultureInfo.DefaultThreadCurrentUICulture);
+        public string this[string index] => Resources.Strings.ResourceManager.GetString(index);
     }
 }
