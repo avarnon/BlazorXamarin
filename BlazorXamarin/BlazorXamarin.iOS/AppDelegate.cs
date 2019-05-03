@@ -1,15 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Reflection;
 using BlazorXamarin.Application.Contracts;
 using BlazorXamarin.Application.Models;
-using BlazorXamarin.Application.Services;
 using BlazorXamarin.iOS.Services;
 using BlazorXamarin.UI.Common.Contracts;
-using CoreFoundation;
 using Foundation;
 using Newtonsoft.Json;
 using Prism;

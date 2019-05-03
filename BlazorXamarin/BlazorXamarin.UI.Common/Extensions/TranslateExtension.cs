@@ -34,7 +34,7 @@ namespace BlazorXamarin.UI.Common
 
             ITranslationService translationService = (ITranslationService)App.Current.Container.Resolve(typeof(ITranslationService));
 
-            string translation =  translationService[this.Text];
+            string translation = translationService[this.Text];
 
             return translation;
         }

@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.debug.json" />
+    <None Remove="appsettings.json" />
+    <None Remove="appsettings.release.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="appsettings.debug.json">
+      <DependentUpon>appsettings.json</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="appsettings.json" />
+    <EmbeddedResource Include="appsettings.release.json">
+      <DependentUpon>appsettings.json</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Unity.Forms" Version="7.1.0.431" />
+    <PackageReference Include="Xamarin.Forms.Platform.WPF" Version="3.6.0.344457" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorXamarin\BlazorXamarin.UI.Common\BlazorXamarin.UI.Common.csproj" />
+  </ItemGroup>
+
+</Project>

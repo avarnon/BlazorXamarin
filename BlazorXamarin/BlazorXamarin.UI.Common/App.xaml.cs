@@ -8,12 +8,9 @@ using BlazorXamarin.UI.Common.Views;
 using Prism;
 using Prism.Ioc;
 using Prism.Unity;
-using Xamarin.Forms.Xaml;
 using Unity;
-using Unity.Extension;
 using Unity.Injection;
-using System.Threading;
-using System.Threading.Tasks;
+using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace BlazorXamarin.UI.Common

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Prism.Commands;
 using Prism.Navigation;
 
@@ -17,7 +18,23 @@ namespace BlazorXamarin.UI.Common.ViewModels
 
         private void AboutClick()
         {
-            Xamarin.Forms.Device.OpenUri(new Uri("http://blazor.net"));
+            Uri aboutUri = new Uri("http://blazor.net");
+
+            if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.WPF)
+            {
+                Process.Start(new ProcessStartInfo()
+                {
+                    FileName = "cmd",
+                    WindowStyle = ProcessWindowStyle.Hidden,
+                    UseShellExecute = false,
+                    CreateNoWindow = true,
+                    Arguments = $"/c start {aboutUri.AbsoluteUri}",
+                });
+            }
+            else
+            {
+                Xamarin.Forms.Device.OpenUri(aboutUri);
+            }
         }
     }
 }

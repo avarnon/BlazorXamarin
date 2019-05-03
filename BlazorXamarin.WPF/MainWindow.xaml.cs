@@ -2,35 +2,33 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Android.App;
-using Android.Content.PM;
-using Android.OS;
 using BlazorXamarin.Application.Contracts;
 using BlazorXamarin.Application.Models;
-using BlazorXamarin.Droid.Services;
 using BlazorXamarin.UI.Common.Contracts;
+using BlazorXamarin.WPF.Services;
 using Newtonsoft.Json;
 using Prism;
 using Prism.Ioc;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.WPF;
 
-namespace BlazorXamarin.Droid
+namespace BlazorXamarin.WPF
 {
-    [Activity(Label = "BlazorXamarin", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : FormsApplicationPage
     {
-        protected override void OnCreate(Bundle bundle)
+        public MainWindow()
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
+            InitializeComponent();
 
-            base.OnCreate(bundle);
-
-            global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new BlazorXamarin.UI.Common.App(new AndroidInitializer()));
+            Forms.Init();
+            LoadApplication(new BlazorXamarin.UI.Common.App(new WpfInitializer()));
         }
     }
 
-    public class AndroidInitializer : IPlatformInitializer
+    public class WpfInitializer : IPlatformInitializer
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
@@ -73,4 +71,3 @@ namespace BlazorXamarin.Droid
         }
     }
 }
-
