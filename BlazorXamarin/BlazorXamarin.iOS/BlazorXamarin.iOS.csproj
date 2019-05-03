@@ -105,6 +105,15 @@
     <ITunesArtwork Include="iTunesArtwork@1x.png" />
     <ITunesArtwork Include="iTunesArtwork@2x.png" />
     <ITunesArtwork Include="iTunesArtwork@3x.png" />
+    <BundleResource Include="Resources\base.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\de.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\de.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\en.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\en.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\fr.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\fr.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\es.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\es.lproj\Localizable.strings" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -184,12 +193,12 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Default-568h@2x.png" />
-    <BundleResource Include="Resources\Default-Portrait.png" />
-    <BundleResource Include="Resources\Default-Portrait@2x.png" />
-    <BundleResource Include="Resources\Default.png" />
-    <BundleResource Include="Resources\Default@2x.png" />
-    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\base.lproj\Default-568h%402x.png" />
+    <BundleResource Include="Resources\base.lproj\Default-Portrait.png" />
+    <BundleResource Include="Resources\base.lproj\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\base.lproj\Default.png" />
+    <BundleResource Include="Resources\base.lproj\Default%402x.png" />
+    <InterfaceDefinition Include="Resources\base.lproj\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

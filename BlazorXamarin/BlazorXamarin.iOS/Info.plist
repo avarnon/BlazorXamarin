@@ -23,9 +23,9 @@
     <key>MinimumOSVersion</key>
     <string>8.0</string>
     <key>CFBundleDisplayName</key>
-    <string>BlazorXamarin</string>
+    <string>BlazorXamarin.iOS</string>
     <key>CFBundleIdentifier</key>
-    <string>com.companyname.appname</string>
+    <string>com.rightpoint.blazorxamarin_ios</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>CFBundleIconFiles</key>
@@ -48,5 +48,14 @@
     </array>
     <key>UILaunchStoryboardName</key>
     <string>LaunchScreen</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleLocalizations</key>
+    <array>
+      <string>en</string>
+      <string>de</string>
+      <string>es</string>
+      <string>fr</string>
+    </array>
   </dict>
 </plist>
